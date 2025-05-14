@@ -82,6 +82,7 @@ class NumberTable extends React.Component {
                 </table>
                 </div>
                 {!!this.state.selectedNumbers.length && <div className="row p-5 rounded" >
+
                         <div className="col-md-6 col-md-offset-3">
                             <h3>Selected Numbers </h3>
                             <ul className="list-group">
