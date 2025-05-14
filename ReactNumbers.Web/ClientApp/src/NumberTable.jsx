@@ -81,19 +81,19 @@ class NumberTable extends React.Component {
                     </tbody>
                 </table>
                 </div>
-                {!!this.state.selectedNumbers && <div className="row p-5 rounded"  >
-                    <div className="col-md-6 col-md-offset-3">
-                        <h3>Selected Numbers </h3>
-                        <ul className="list-group">
+                {!!this.state.selectedNumbers.length && <div className="row p-5 rounded" >
+                        <div className="col-md-6 col-md-offset-3">
+                            <h3>Selected Numbers </h3>
+                            <ul className="list-group">
 
-                            {
-                                this.state.selectedNumbers.map((n) => <SelectedNumbers isLocked={this.state.lockedNumbers.some((l => l.currentNumber.id === n.currentNumber.id))} onLockClick={() => this.onLockedClick(n.currentNumber)} number={n.currentNumber.number} key={n.currentNumber.number} />)
+                                {
+                                    this.state.selectedNumbers.map((n) => <SelectedNumbers isLocked={this.state.lockedNumbers.some((l => l.currentNumber.id === n.currentNumber.id))} onLockClick={() => this.onLockedClick(n.currentNumber)} number={n.currentNumber.number} key={n.currentNumber.number} />)
                                 
-                            }
+                                }
                            
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
                 }
             </>
         )
